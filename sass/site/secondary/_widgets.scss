@@ -1,13 +1,46 @@
-.widget {
-	margin: 0 0 1.5em;
+#secondary{
+	background: $color__background-secondary;
+	text-align: center;
 
-	/* Make sure select elements fit in widgets */
+	.widget{
+		padding: 30px 15px;
+		border-bottom: 1px solid $color__border;
+	}
+
+	.widget-title{
+		@include font-size( 2 );
+		font-weight: lighter;
+		padding-bottom: 15px;
+	}
+	
+	ol,
+	ul{
+		margin-left: 0;
+		margin-bottom: 0;
+
+		li{
+			list-style: none;
+			padding: 5px 0;
+		}
+	}
+
 	select {
 		max-width: 100%;
-	}
-}
+	}	
 
-/* Search widget */
-.widget_search .search-submit {
-	display: none;
+	a{
+		text-decoration: none;
+	}
+
+	/* Search widget */
+	.widget_search{
+		.search-field{
+			width: 100%;
+			@include box-sizing( border-box );
+		}
+		
+		.search-submit {
+			display: none;
+		}
+	}	
 }

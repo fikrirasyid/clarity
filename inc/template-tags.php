@@ -79,7 +79,7 @@ function clarity_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		_x( 'Posted on %s', 'post date', 'clarity' ),
+		_x( 'On %s', 'post date', 'clarity' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 

@@ -1,16 +1,20 @@
 // @import "../layout/content-sidebar";
 // @import "../layout/sidebar-content";
+
+.wrap{
+	display: block;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
 /*--------------------------------------------------------------
-10.1 Posts and pages
+10.1 Masthead
 --------------------------------------------------------------*/
+@import "masthead";
+
+
+@import "site-navigation";
 @import "primary/posts-and-pages";
-
-/*--------------------------------------------------------------
-10.2 Asides
---------------------------------------------------------------*/
-@import "primary/asides";
-
-/*--------------------------------------------------------------
-10.3 Comments
---------------------------------------------------------------*/
 @import "primary/comments";
+@import "primary/asides";
+@import "colophon";

@@ -1,0 +1,22 @@
+#masthead{
+	display: block;
+	width: 100%;
+	background: $color__background-masthead;
+
+	.wrap{
+		padding-top: 60px;
+		padding-bottom: 60px;
+		text-align: center;
+
+		.site-title{
+			@include font-size( 2.4 );
+			font-weight: bold;
+		}
+
+		.site-description{
+			@include font-size( 1.2 );
+			color: $color__text-site-description;
+			font-weight: lighter;
+		}
+	}
+}
