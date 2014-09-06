@@ -4,6 +4,10 @@
 	float: left;
 	width: 100%;
 
+	.nav-menu{
+		margin-top: 10px;
+	}
+
 	ul {
 		list-style: none;
 		margin: 0;
@@ -43,8 +47,9 @@
 			left: auto;
 		}
 	}
+
 	li {
-		float: left;
+		display: block;
 		position: relative;
 
 		&:hover > a {
@@ -53,6 +58,7 @@
 	a {
 		display: block;
 		text-decoration: none;
+		padding: 5px 0;
 	}
 
 	.current_page_item a,

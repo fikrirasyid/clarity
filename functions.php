@@ -92,6 +92,8 @@ add_action( 'widgets_init', 'clarity_widgets_init' );
  * Enqueue scripts and styles.
  */
 function clarity_scripts() {
+	wp_enqueue_style( 'clarity-google-font', 'http://fonts.googleapis.com/css?family=Open+Sans:regular,bold,italic,thin,thinitalic,bolditalic' );
+
 	wp_enqueue_style( 'clarity-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'clarity-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
