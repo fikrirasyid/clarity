@@ -5,7 +5,25 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<?php if( has_post_thumbnail() ) : ?>
+		<div class="entry-featured-image">			
+			<?php the_post_thumbnail(); ?>
+		</div>
+	<?php endif; ?>		
+
 	<header class="entry-header">
+		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$categories_list = get_the_category_list( __( ', ', 'clarity' ) );
+				if ( $categories_list && clarity_categorized_blog() ) :
+			?>
+			<span class="cat-links">
+				<?php echo $categories_list; ?>
+			</span>
+			<?php endif; // End if categories ?>
+		<?php endif; // End if 'post' == get_post_type() ?>		
+		
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
@@ -24,36 +42,18 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php
-			/* translators: used between list items, there is a space after the comma */
-			$category_list = get_the_category_list( __( ', ', 'clarity' ) );
-
-			/* translators: used between list items, there is a space after the comma */
-			$tag_list = get_the_tag_list( '', __( ', ', 'clarity' ) );
-
-			if ( ! clarity_categorized_blog() ) {
-				// This blog only has 1 category so we just need to worry about tags in the meta text
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'clarity' );
-				} else {
-					$meta_text = __( 'Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'clarity' );
-				}
-			} else {
-				// But this blog has loads of categories so we should probably display them here
-				if ( '' != $tag_list ) {
-					$meta_text = __( 'This entry was posted in %1$s and tagged %2$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'clarity' );
-				} else {
-					$meta_text = __( 'This entry was posted in %1$s. Bookmark the <a href="%3$s" rel="bookmark">permalink</a>.', 'clarity' );
-				}
-			} // end check for categories on this blog
-
-			printf(
-				$meta_text,
-				$category_list,
-				$tag_list,
-				get_permalink()
-			);
-		?>
+		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
+			<?php
+				/* translators: used between list items, there is a space after the comma */
+				$tags_list = get_the_tag_list( '', __( ', ', 'clarity' ) );
+				if ( $tags_list ) :
+			?>
+			<span class="tags-links">
+				<span class="genericon genericon-tag"></span>
+				<?php echo $tags_list; ?>
+			</span>
+			<?php endif; // End if $tags_list ?>
+		<?php endif; // End if 'post' == get_post_type() ?>
 
 		<?php edit_post_link( __( 'Edit', 'clarity' ), '<span class="edit-link">', '</span>' ); ?>
 	</footer><!-- .entry-footer -->

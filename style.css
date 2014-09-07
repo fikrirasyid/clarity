@@ -1339,7 +1339,7 @@ a:focus, a:active {
 }
 
 .entry-featured-image {
-  border-top: 4px solid #1f7f5c;
+  display: block;
   margin: 0 -15px 10px;
 }
 
@@ -1554,6 +1554,11 @@ a:focus, a:active {
 }
 #reply-title a {
   text-decoration: none;
+}
+
+.no-comments {
+  padding: 20px 15px;
+  margin-bottom: 0;
 }
 
 #colophon {
