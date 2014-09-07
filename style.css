@@ -1141,6 +1141,7 @@ a:focus, a:active {
   text-align: center;
   /* Search widget */
   /* Calendar Widget */
+  /* RSS */
 }
 #secondary .widget {
   padding: 30px 15px;
@@ -1202,6 +1203,25 @@ a:focus, a:active {
 #secondary .widget_calendar table #next {
   padding-top: 20px;
   text-align: right;
+}
+#secondary .widget_rss li {
+  margin-bottom: 20px;
+}
+#secondary .widget_rss .rsswidget {
+  display: block;
+}
+#secondary .widget_rss .rss-date {
+  display: block;
+  color: #afafaf;
+  margin-bottom: 10px;
+  font-size: 12px;
+  font-size: 1.2rem;
+}
+#secondary .widget_rss .rssSummary {
+  font-size: 12px;
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 5px;
 }
 
 /*--------------------------------------------------------------

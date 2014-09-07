@@ -77,8 +77,7 @@
 				// background: $color__gray-light;
 			}
 
-			#prev{
-				
+			#prev{				
 				padding-top: 20px;
 			}
 
@@ -86,6 +85,30 @@
 				padding-top: 20px;
 				text-align: right;
 			}
+		}
+	}
+
+	/* RSS */
+	.widget_rss{
+		li{
+			margin-bottom: 20px;
+		}
+		
+		.rsswidget{
+			display: block;
+		}
+
+		.rss-date{
+			display: block;
+			color: $color__text-meta;
+			margin-bottom: 10px;
+			@include font-size( 1.2 );
+		}
+
+		.rssSummary{
+			@include font-size( 1.2 );
+			display: block;
+			margin-bottom: 5px;
 		}
 	}
 }
