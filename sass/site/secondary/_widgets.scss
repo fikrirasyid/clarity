@@ -32,11 +32,12 @@
 		text-decoration: none;
 	}
 
-	/* Search widget */
+	/* Search Widget */
 	.widget_search{
 		.search-field{
 			width: 100%;
 			@include box-sizing( border-box );
+			padding: 6px 10px;
 		}
 		
 		.search-submit {
@@ -88,12 +89,12 @@
 		}
 	}
 
-	/* RSS */
+	/* RSS Widget */
 	.widget_rss{
 		li{
 			margin-bottom: 20px;
 		}
-		
+
 		.rsswidget{
 			display: block;
 		}

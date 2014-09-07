@@ -1139,9 +1139,9 @@ a:focus, a:active {
 #secondary {
   background: #fafafa;
   text-align: center;
-  /* Search widget */
+  /* Search Widget */
   /* Calendar Widget */
-  /* RSS */
+  /* RSS Widget */
 }
 #secondary .widget {
   padding: 30px 15px;
@@ -1174,6 +1174,7 @@ a:focus, a:active {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  padding: 6px 10px;
 }
 #secondary .widget_search .search-submit {
   display: none;
