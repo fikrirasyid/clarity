@@ -1561,6 +1561,13 @@ a:focus, a:active {
   margin-bottom: 0;
 }
 
+.no-results .page-content {
+  margin-top: 0;
+}
+.no-results .page-content .search-field {
+  padding: 5px 10px 4px;
+}
+
 #colophon {
   background: #4a4a4a;
   color: white;
