@@ -1,3 +1,4 @@
+/* Main top navigation */
 .main-navigation {
 	clear: both;
 	display: block;
@@ -12,6 +13,7 @@
 		list-style: none;
 		margin: 0;
 		padding-left: 0;
+		display: none;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -66,24 +68,15 @@
 	}
 }
 
-/* Small menu */
-.menu-toggle {
-	display: none;
+/* Toggle */
+.menu-toggle,
+.main-navigation.toggled .nav-menu {
+	display: block;
 }
 
-@media screen and (max-width: 600px) {
-	.menu-toggle,
-	.main-navigation.toggled .nav-menu {
-		display: block;
-	}
-
-	.main-navigation ul {
-		display: none;
-	}
-}
-
-.site-main .paging-navigation,
-.site-main .post-navigation {
+/* Post prev / next navigation */
+.paging-navigation,
+.post-navigation {
 	margin: 1.5em 0;
 	overflow: hidden;
 }
@@ -101,4 +94,43 @@
 	float: right;
 	text-align: right;
 	width: 50%;
+}
+
+/* Comment navigation */
+#comment-nav-above{
+	border-bottom: 1px solid $color__border;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	overflow: hidden;
+}
+
+#comment-nav-below{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	overflow: hidden;
+}
+
+.comment-navigation,
+.nav-links{
+	padding-right: 15px;
+	padding-left: 15px;
+
+	a{
+		text-decoration: none;
+	}
+}
+
+/**
+ * Desktop adjustment
+ */
+@media screen and (min-width: 1023px) {
+	.menu-toggle {
+		display: none;
+	}
+
+	.main-navigation ul {
+		display: block;
+	}
 }

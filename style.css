@@ -969,6 +969,7 @@ a:focus, a:active {
 /*--------------------------------------------------------------
 5.2 Menus
 --------------------------------------------------------------*/
+/* Main top navigation */
 .main-navigation {
   clear: both;
   display: block;
@@ -982,6 +983,7 @@ a:focus, a:active {
   list-style: none;
   margin: 0;
   padding-left: 0;
+  display: none;
 }
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -1014,23 +1016,15 @@ a:focus, a:active {
   padding: 5px 0;
 }
 
-/* Small menu */
-.menu-toggle {
-  display: none;
+/* Toggle */
+.menu-toggle,
+.main-navigation.toggled .nav-menu {
+  display: block;
 }
 
-@media screen and (max-width: 600px) {
-  .menu-toggle,
-  .main-navigation.toggled .nav-menu {
-    display: block;
-  }
-
-  .main-navigation ul {
-    display: none;
-  }
-}
-.site-main .paging-navigation,
-.site-main .post-navigation {
+/* Post prev / next navigation */
+.paging-navigation,
+.post-navigation {
   margin: 1.5em 0;
   overflow: hidden;
 }
@@ -1050,6 +1044,44 @@ a:focus, a:active {
   width: 50%;
 }
 
+/* Comment navigation */
+#comment-nav-above {
+  border-bottom: 1px solid #efefef;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  overflow: hidden;
+}
+
+#comment-nav-below {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: block;
+  overflow: hidden;
+}
+
+.comment-navigation,
+.nav-links {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.comment-navigation a,
+.nav-links a {
+  text-decoration: none;
+}
+
+/**
+ * Desktop adjustment
+ */
+@media screen and (min-width: 1023px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .main-navigation ul {
+    display: block;
+  }
+}
 /*--------------------------------------------------------------
 6.0 Accessibility
 --------------------------------------------------------------*/
@@ -1421,16 +1453,6 @@ a:focus, a:active {
   margin-right: 2px;
 }
 
-.comment-navigation,
-.nav-links {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-.comment-navigation a,
-.nav-links a {
-  text-decoration: none;
-}
-
 /**
  * Adding footnote support, powered by [Civil Footnotes plugin](https://wordpress.org/plugins/civil-footnotes/)
  */
@@ -1456,21 +1478,6 @@ a:focus, a:active {
   font-size: 1.6rem;
   font-weight: lighter;
   padding-bottom: 15px;
-}
-
-#comment-nav-above {
-  border-bottom: 1px solid #efefef;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: block;
-  overflow: hidden;
-}
-
-#comment-nav-below {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  display: block;
-  overflow: hidden;
 }
 
 .comment-list {
