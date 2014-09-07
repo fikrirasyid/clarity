@@ -1262,6 +1262,26 @@ a:focus, a:active {
   margin: 0 0 1.5em;
 }
 
+/**
+ * Page Header
+ */
+.page-header {
+  padding: 20px 15px;
+  border-bottom: 1px solid #efefef;
+}
+.page-header .page-title {
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: lighter;
+}
+.page-header .taxonomy-description {
+  color: #afafaf;
+  font-style: italic;
+}
+.page-header .taxonomy-description p {
+  margin-bottom: 0;
+}
+
 /**	
  * Main Content
  */
@@ -1315,7 +1335,6 @@ a:focus, a:active {
   font-size: 11px;
   font-size: 1.1rem;
   color: #afafaf;
-  display: none;
 }
 .entry-footer a {
   text-decoration: none;
@@ -1475,11 +1494,6 @@ a:focus, a:active {
 }
 #reply-title a {
   text-decoration: none;
-}
-
-.blog .format-aside .entry-title,
-.archive .format-aside .entry-title {
-  display: none;
 }
 
 #colophon {

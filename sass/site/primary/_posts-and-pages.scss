@@ -23,6 +23,28 @@
 	margin: 0 0 1.5em;
 }
 
+/**
+ * Page Header
+ */
+.page-header{
+	padding: 20px 15px;
+	border-bottom: 1px solid $color__border;
+
+	.page-title{
+		@include font-size( 2 );
+		font-weight: lighter;
+	}
+
+	.taxonomy-description{
+		color: $color__text-meta;
+		font-style: italic;
+
+		p{
+			margin-bottom: 0;
+		}
+	}
+}
+
 /**	
  * Main Content
  */
@@ -83,7 +105,7 @@
 	padding-top: 20px;
 	@include font-size( 1.1 );
 	color: $color__text-meta;
-	display: none;
+	// display: none;
 
 	a{
 		text-decoration: none;

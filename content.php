@@ -60,7 +60,8 @@
 				if ( $tags_list ) :
 			?>
 			<span class="tags-links">
-				<?php printf( __( 'Tagged %1$s', 'clarity' ), $tags_list ); ?>
+				<span class="genericon genericon-tag"></span>
+				<?php echo $tags_list; ?>
 			</span>
 			<?php endif; // End if $tags_list ?>
 		<?php endif; // End if 'post' == get_post_type() ?>
