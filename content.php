@@ -5,6 +5,14 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	
+
+	<?php if( has_post_thumbnail() ) : ?>
+		<div class="entry-featured-image">			
+			<?php the_post_thumbnail(); ?>
+		</div>
+	<?php endif; ?>		
+
 	<header class="entry-header">
 		<?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
 			<?php

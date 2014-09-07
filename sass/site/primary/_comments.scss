@@ -1,6 +1,140 @@
-.comment-content a {
-	word-wrap: break-word;
+.comments-title{
+	padding: 40px 15px 10px;
+	@include font-size( 1.6 );
+	font-weight: lighter;
+	padding-bottom: 15px;	
 }
+
+#comment-nav-above{
+	border-bottom: 1px solid $color__border;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	overflow: hidden;
+}
+
+#comment-nav-below{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	display: block;
+	overflow: hidden;
+}
+
+.comment-list{
+	margin-left: 0;
+	margin-bottom: 0;
+	background: $color__background-comment;
+	box-shadow: inset 0 0 4px darken( $color__background-comment, 5% );
+
+	li{
+		list-style: none;
+	}
+
+	.comment{
+		border-bottom: 1px solid $color__border;
+
+		.children{
+			border-top: 1px solid $color__border;
+			margin-left: 0;
+			padding-left: 2em;
+
+			.comment{
+				border-bottom: none;
+			}
+		}		
+	}
+
+	.comment-body{
+		padding: 20px 15px;
+
+		.comment-meta{
+			position: relative;
+			padding-left: 50px;
+			margin-bottom: 15px;
+
+			.avatar{
+				position: absolute;
+				top: 0;
+				left: 0;
+				border-radius: 50%;
+			}
+
+			a{
+				text-decoration: none;
+			}
+
+			.comment-author{
+				@include font-size( 1.5 );
+				font-weight: lighter;
+
+				.fn{
+					font-weight: lighter;
+				}
+			}
+
+			.comment-metadata{
+				@include font-size( 1.1 );
+				color: $color__text-meta;
+
+				a{
+					color: $color__text-meta;
+				}
+			}
+		}
+
+		.comment-content{
+			line-height: 1.8;
+			a{
+				word-wrap: break-word;
+			}
+
+			p:last-child{
+				margin-bottom: 10px;
+			}
+		}
+
+		.reply{
+			a.comment-reply-link{
+				text-decoration: none;
+			}
+		}		
+	}
+}
+
 .bypostauthor {
 	display: block;
+}
+
+#respond{
+	padding: 40px 15px 20px;
+	
+	.form-allowed-tags,
+	.comment-notes{
+		@include font-size( 1.2 );
+		color: $color__text-meta;
+
+		code{
+			@include font-size( 1.2 );
+		}
+	}
+
+	label{
+		display: block;
+		padding-bottom: 5px;
+		color: lighten( $color__text-screen, 10% );
+	}
+
+	textarea{
+		resize: none;
+	}
+}
+
+#reply-title{
+	@include font-size( 1.6 );
+	font-weight: lighter;
+	padding-bottom: 10px;	
+
+	a{
+		text-decoration: none;
+	}
 }

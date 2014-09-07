@@ -1,0 +1,24 @@
+/**
+ * Adding footnote support, powered by [Civil Footnotes plugin](https://wordpress.org/plugins/civil-footnotes/)
+ */
+.entry-content{
+	a[rel="footnote"]{
+		text-decoration: none;
+	}
+
+	.footnotes{
+		font-size: .9em;
+
+		li{
+			color: lighten( $color__text-screen, 40% );
+
+			p{
+				margin-bottom: 0;
+
+				.backlink{
+					text-decoration: none;
+				}
+			}
+		}
+	}	
+}
