@@ -15,7 +15,7 @@ get_header(); ?>
 					<h1 class="page-title"><?php _e( 'Oops! That page can&rsquo;t be found.', 'clarity' ); ?></h1>
 				</header><!-- .page-header -->
 
-				<div class="page-content">
+				<div class="page-content entry-content hentry">
 					<p><?php _e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'clarity' ); ?></p>
 
 					<?php get_search_form(); ?>

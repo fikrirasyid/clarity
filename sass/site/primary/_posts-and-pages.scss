@@ -108,6 +108,26 @@
 .entry-content{
 	line-height: 1.8;
 	// display: none;
+
+	h1{
+		@include font-size( 2.4 );
+		margin-top: 30px;
+	}
+
+	h2{
+		@include font-size( 1.9 );
+		margin-top: 30px;
+	}
+
+	h3{
+		@include font-size( 1.6 );
+		margin-top: 30px;
+	}
+	
+	h4{
+		@include font-size( 1.4 );
+		margin-top: 30px;
+	}	
 }		
 
 .entry-footer{

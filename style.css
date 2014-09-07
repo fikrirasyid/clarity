@@ -1384,6 +1384,26 @@ a:focus, a:active {
 .entry-content {
   line-height: 1.8;
 }
+.entry-content h1 {
+  font-size: 24px;
+  font-size: 2.4rem;
+  margin-top: 30px;
+}
+.entry-content h2 {
+  font-size: 19px;
+  font-size: 1.9rem;
+  margin-top: 30px;
+}
+.entry-content h3 {
+  font-size: 16px;
+  font-size: 1.6rem;
+  margin-top: 30px;
+}
+.entry-content h4 {
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin-top: 30px;
+}
 
 .entry-footer {
   padding-top: 20px;
@@ -1561,9 +1581,11 @@ a:focus, a:active {
   margin-bottom: 0;
 }
 
+.not-found .page-content,
 .no-results .page-content {
   margin-top: 0;
 }
+.not-found .page-content .search-field,
 .no-results .page-content .search-field {
   padding: 5px 10px 4px;
 }
