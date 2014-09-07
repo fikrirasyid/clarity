@@ -1140,6 +1140,7 @@ a:focus, a:active {
   background: #fafafa;
   text-align: center;
   /* Search widget */
+  /* Calendar Widget */
 }
 #secondary .widget {
   padding: 30px 15px;
@@ -1175,6 +1176,32 @@ a:focus, a:active {
 }
 #secondary .widget_search .search-submit {
   display: none;
+}
+#secondary .widget_calendar table thead th {
+  padding: 5px 3px;
+  text-align: center;
+}
+#secondary .widget_calendar table tbody td {
+  padding: 5px 3px;
+  text-align: center;
+}
+#secondary .widget_calendar table tfoot td {
+  padding: 5px 3px;
+}
+#secondary .widget_calendar table caption {
+  padding: 10px 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-size: 1.1rem;
+  letter-spacing: 3px;
+}
+#secondary .widget_calendar table #prev {
+  padding-top: 20px;
+}
+#secondary .widget_calendar table #next {
+  padding-top: 20px;
+  text-align: right;
 }
 
 /*--------------------------------------------------------------
@@ -1325,6 +1352,13 @@ a:focus, a:active {
   color: #afafaf;
   text-decoration: none;
 }
+.entry-header .entry-meta a .genericon,
+.entry-header .entry-meta a .entry-date {
+  vertical-align: middle;
+}
+.entry-header .entry-meta a .genericon {
+  margin-right: 5px;
+}
 
 .entry-content {
   line-height: 1.8;
@@ -1336,9 +1370,14 @@ a:focus, a:active {
   font-size: 1.1rem;
   color: #afafaf;
 }
+.entry-footer .genericon,
 .entry-footer a {
   text-decoration: none;
   color: #afafaf;
+  vertical-align: middle;
+}
+.entry-footer .genericon {
+  margin-right: 2px;
 }
 
 .comment-navigation,
