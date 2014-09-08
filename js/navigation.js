@@ -1,34 +1,25 @@
-/**
- * navigation.js
- *
- * Handles toggling the navigation menu for small screens.
- */
-( function() {
-	var container, button, menu;
+jQuery(document).ready(function($){
+	/**
+	 * Main navigation desktop UX
+	 */
+	$('.main-navigation li').hover(
+		function(){
+			$(this).addClass('hovered');
+		},
+		function(){
+			$(this).removeClass('hovered');
+		}
+	);	
 
-	container = document.getElementById( 'site-navigation' );
-	if ( ! container )
-		return;
+	/**
+	 * Mobile toggle main navigation UX
+	 */
+	$('.menu-toggle').click(function(e){
+		e.preventDefault();
 
-	button = container.getElementsByTagName( 'button' )[0];
-	if ( 'undefined' === typeof button )
-		return;
+		var target_id = $(this).attr( 'data-target-id' );
 
-	menu = container.getElementsByTagName( 'ul' )[0];
+		$('#'+target_id).toggleClass('toggled');
+	});
 
-	// Hide menu toggle button if menu is empty and return early.
-	if ( 'undefined' === typeof menu ) {
-		button.style.display = 'none';
-		return;
-	}
-
-	if ( -1 === menu.className.indexOf( 'nav-menu' ) )
-		menu.className += ' nav-menu';
-
-	button.onclick = function() {
-		if ( -1 !== container.className.indexOf( 'toggled' ) )
-			container.className = container.className.replace( ' toggled', '' );
-		else
-			container.className += ' toggled';
-	};
-} )();
+});

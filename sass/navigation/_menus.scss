@@ -5,8 +5,12 @@
 	float: left;
 	width: 100%;
 
-	.nav-menu{
-		margin-top: 10px;
+	&.toggled{
+		ul{
+			display: block;
+			position: relative;
+			padding-bottom: 10px;
+		}
 	}
 
 	ul {
@@ -15,38 +19,12 @@
 		padding-left: 0;
 		display: none;
 
-		ul {
-			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-			float: left;
-			position: absolute;
-			top: 1.5em;
-			left: -999em;
-			z-index: 99999;
-
-			ul {
-				left: -999em;
-				top: 0;
-			}
-
-			li {
-				&:hover > ul {
-					left: 100%;
-				}
-			}
-
-			a {
-				width: 200px;
-			}
-
-			:hover > a {
-			}
-
-			a:hover {
-			}
-		}
-
 		li:hover > ul {
 			left: auto;
+		}
+
+		.sub-menu{
+			padding-left: 20px
 		}
 	}
 
@@ -57,6 +35,7 @@
 		&:hover > a {
 		}
 	}
+
 	a {
 		display: block;
 		text-decoration: none;
@@ -68,10 +47,28 @@
 	}
 }
 
-/* Toggle */
-.menu-toggle,
-.main-navigation.toggled .nav-menu {
+/* Toggle main top navigation */
+.menu-toggle {
 	display: block;
+	position: relative;
+	@include border-radius( 0 );
+	padding: 13px 0 13px 25px;
+
+	&:before{
+		content: '\f419';
+		font-family: Genericons;
+		font-size: 16px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -8px;
+	}
+	
+	&:focus,
+	&:active,
+	&:hover{
+		background: $color__accent;
+	}
 }
 
 /* Post prev / next navigation */
@@ -132,5 +129,74 @@
 
 	.main-navigation ul {
 		display: block;
+		@include font-size( 1.4 );
+
+		li{
+			float: left;
+			position: relative;
+
+			a{
+				padding: 10px 10px;
+				position: relative;
+				float: left;
+				position: relative;
+
+				&:hover{
+					background: darken( $color__accent, 5% );
+				}
+
+				&:active{
+					background: lighten( $color__accent, 5% );
+				}
+			}
+
+			&.menu-item-has-children > a:after{
+				content: '\f431';
+				font-family: Genericons;
+				margin: 3px 0 0 5px;
+			}
+
+			ul.sub-menu{
+				display: none;
+				position: absolute;
+				top: 42px;
+				left: 0;
+				width: 200px;
+				background: $color__accent;
+				padding-left: 0;
+				padding-bottom: 0;
+
+				li{
+					border-bottom: 1px solid darken( $color__accent, 5% );
+					display: block;
+
+					&.menu-item-has-children > a{
+						padding-right: 30px;
+					}
+
+					&.menu-item-has-children > a:after{
+						content: '\f429';
+						position: absolute;
+						top: 50%;
+						right: 8px;
+						margin-top: -10px;
+					}
+
+					a{
+						display: block;
+						width: 200px;
+					}	
+
+					ul.sub-menu{
+						left: 200px;
+						top: 0;
+					}
+				}
+			}
+
+			&.hovered > ul.sub-menu{
+				display: block;
+			}
+		}
 	}
 }

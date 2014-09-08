@@ -1,8 +1,7 @@
 #site-navigation{
-	background: $color__background-site-navigation;
+	background: $color__accent;
 
-	.wrap{
-		padding-top: 5px;
-		padding-bottom: 5px;
+	a{
+		color: white;
 	}
 }

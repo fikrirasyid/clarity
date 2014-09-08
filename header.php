@@ -24,7 +24,7 @@
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<div class="wrap">
-			<button class="menu-toggle"><?php _e( 'Primary Menu', 'clarity' ); ?></button>
+			<button class="menu-toggle" data-target-id="site-navigation"><?php _e( 'Menu', 'clarity' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>			
 		</div>
 	</nav><!-- #site-navigation -->	
