@@ -113,3 +113,13 @@
 		}
 	}
 }
+
+/**
+ * Desktop Adjustment for sidebar
+ */
+@media screen and (min-width: $width__desktop-breakpoint){
+	#secondary{
+		background: transparent;
+		text-align: left;
+	}
+}

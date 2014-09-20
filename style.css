@@ -1319,6 +1319,15 @@ a:focus, a:active {
   margin-bottom: 5px;
 }
 
+/**
+ * Desktop Adjustment for sidebar
+ */
+@media screen and (min-width: 1023px) {
+  #secondary {
+    background: transparent;
+    text-align: left;
+  }
+}
 /*--------------------------------------------------------------
 10.0 Content
 --------------------------------------------------------------*/
@@ -1566,6 +1575,14 @@ body.home #masthead .site-title {
   margin-right: 2px;
 }
 
+/**
+ * Desktop adjustment
+ */
+@media screen and (min-width: 1023px) {
+  #main .hentry {
+    margin-right: 40px;
+  }
+}
 /**
  * Adding footnote support, powered by [Civil Footnotes plugin](https://wordpress.org/plugins/civil-footnotes/)
  */

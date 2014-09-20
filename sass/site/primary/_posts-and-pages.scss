@@ -147,3 +147,14 @@
 		margin-right: 2px;
 	}
 }
+
+/**
+ * Desktop adjustment
+ */
+ @media screen and (min-width: $width__desktop-breakpoint){
+	#main{
+		.hentry{
+			margin-right: 40px;
+		}
+	}
+ }
