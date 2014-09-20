@@ -7,7 +7,7 @@
  * @package Clarity
  */
 ?>
-
+		</div><!-- .site-content-wrap -->
 	</div><!-- #content -->
 
 	<footer id="colophon" class="site-footer" role="contentinfo">

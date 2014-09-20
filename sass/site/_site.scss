@@ -7,13 +7,31 @@
 	padding-left: 15px;
 }
 
+/**
+ * Desktop adjustment
+ */
 @media screen and (min-width: $width__desktop-breakpoint){
+	.site-content-wrap,
 	.wrap{
 		width: 980px;
 		padding-left: 0;
 		padding-right: 0;
 		margin-left: auto;
 		margin-right: auto;
+	}
+
+	.site-content-wrap{
+		@include clearfix;
+
+		#primary{
+			float: left;
+			width: 70%;
+		}
+
+		#secondary{
+			float: left;
+			width: 30%;
+		}
 	}
 }
 
