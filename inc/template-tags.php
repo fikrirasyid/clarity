@@ -78,7 +78,7 @@ function clarity_posted_on() {
 		esc_html( get_the_modified_date() )
 	);
 
-	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark"><span class="genericon genericon-time"></span>' . $time_string . '</a>';
+	$posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
 	$byline = sprintf(
 		_x( 'by %s', 'post author', 'clarity' ),

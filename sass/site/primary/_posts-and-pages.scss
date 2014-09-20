@@ -62,25 +62,26 @@
 
 .entry-header{
 	.cat-links{		
+		margin-bottom: 5px;
 
 		a{
 			color: darken( $color__text-meta, 20% );
 			text-decoration: none;
 			@include font-size( 1.1 );
-			font-weight: bold;
+			// font-weight: bold;
+			text-transform: uppercase;
 		}
 	}
 
 	.entry-title{
-		@include font-size( 2.4 );
+		@include font-size( 2.6 );
 		margin-top: -5px;
 		margin-bottom: 10px;
-		font-weight: bold;
+		font-weight: lighter;
 
 		a{
-			@include font-size( 2 );
+			// @include font-size( 2 );
 			text-decoration: none;
-			font-weight: lighter;
 		}
 	}
 
@@ -156,5 +157,26 @@
 		.hentry{
 			margin-right: 40px;
 		}
+	}
+
+	.entry-header{
+		.entry-title{
+			@include font-size( 4 );
+		}
+
+		.entry-meta{
+			font-weight: lighter;
+			@include font-size( 1.4 );
+		}
+	}
+
+	.entry-content{
+		@include font-size( 1.8 );
+		color: #222;
+	}
+
+	.entry-footer{
+		@include font-size( 1.4 );
+		font-weight: lighter;
 	}
  }
