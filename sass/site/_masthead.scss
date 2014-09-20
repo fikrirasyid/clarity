@@ -9,36 +9,69 @@
 	.wrap{
 		padding-top: 20px;
 		padding-bottom: 20px;
+	}
 
-		.site-title{
-			@include font-size( 1.8 );
-			font-weight: bold;
+	.site-title{
+		@include font-size( 1.8 );
+		font-weight: bold;
 
-			a{
-				text-decoration: none;
-			}
+		a{
+			text-decoration: none;
 		}
+	}
 
-		.site-description{
-			@include font-size( 1.2 );
-			color: $color__text-site-description;
-			font-weight: lighter;
-		}
+	.site-description{
+		@include font-size( 1.2 );
+		color: $color__text-site-description;
+		font-weight: lighter;
 	}
 }
 
 /**
  * on Homepage, #masthead may have bigger attention
  */
-.home{
+body.home{
 	#masthead{
 		.wrap{
 			padding-top: 60px;
 			padding-bottom: 60px;
 			text-align: center;
+		}
+
+		.site-title{
+			@include font-size( 2.4 );				
+		}		
+	}
+}
+
+/**
+ * Desktop Adjustment
+ */
+@media screen and (min-width: $width__desktop-breakpoint){
+	#masthead{
+		.wrap{
+			padding-top: 40px;
+			padding-bottom: 40px;
+		}
+
+		.site-title{
+			@include font-size( 2.5 );
+		}
+
+		.site-description{
+			@include font-size( 1.6 );
+		}
+	}
+
+	body.home{
+		#masthead{
+			.wrap{
+				padding-top: 100px;
+				padding-bottom: 110px;
+			}
 
 			.site-title{
-				@include font-size( 2.4 );				
+				@include font-size( 3.4 );
 			}
 		}
 	}

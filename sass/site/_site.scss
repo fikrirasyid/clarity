@@ -7,6 +7,16 @@
 	padding-left: 15px;
 }
 
+@media screen and (min-width: $width__desktop-breakpoint){
+	.wrap{
+		width: 980px;
+		padding-left: 0;
+		padding-right: 0;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
 /*--------------------------------------------------------------
 10.1 Masthead
 --------------------------------------------------------------*/

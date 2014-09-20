@@ -122,7 +122,7 @@
 /**
  * Desktop adjustment
  */
-@media screen and (min-width: 1023px) {
+@media screen and (min-width: $width__desktop-breakpoint) {
 	.menu-toggle {
 		display: none;
 	}

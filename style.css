@@ -1328,6 +1328,15 @@ a:focus, a:active {
   padding-left: 15px;
 }
 
+@media screen and (min-width: 1023px) {
+  .wrap {
+    width: 980px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
 /*--------------------------------------------------------------
 10.1 Masthead
 --------------------------------------------------------------*/
@@ -1343,15 +1352,15 @@ a:focus, a:active {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-#masthead .wrap .site-title {
+#masthead .site-title {
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: bold;
 }
-#masthead .wrap .site-title a {
+#masthead .site-title a {
   text-decoration: none;
 }
-#masthead .wrap .site-description {
+#masthead .site-description {
   font-size: 12px;
   font-size: 1.2rem;
   color: #979797;
@@ -1361,16 +1370,42 @@ a:focus, a:active {
 /**
  * on Homepage, #masthead may have bigger attention
  */
-.home #masthead .wrap {
+body.home #masthead .wrap {
   padding-top: 60px;
   padding-bottom: 60px;
   text-align: center;
 }
-.home #masthead .wrap .site-title {
+body.home #masthead .site-title {
   font-size: 24px;
   font-size: 2.4rem;
 }
 
+/**
+ * Desktop Adjustment
+ */
+@media screen and (min-width: 1023px) {
+  #masthead .wrap {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  #masthead .site-title {
+    font-size: 25px;
+    font-size: 2.5rem;
+  }
+  #masthead .site-description {
+    font-size: 16px;
+    font-size: 1.6rem;
+  }
+
+  body.home #masthead .wrap {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
+  body.home #masthead .site-title {
+    font-size: 34px;
+    font-size: 3.4rem;
+  }
+}
 #site-navigation {
   background: #1f7f5c;
 }
