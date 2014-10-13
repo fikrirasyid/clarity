@@ -1,6 +1,10 @@
 $color__accent: #16A085;
 
 $color__background-body: #F9F9F9;
+$color__shadow: #EFEFEF;
+$color__text-main: #555;
+$color__text-meta: #9B9B9B;
+
 
 $color__background-comment: #fcfcfc;
 $color__background-screen: #f1f1f1;
@@ -19,9 +23,7 @@ $color__text-input-focus: #111;
 $color__link: $color__accent;
 $color__link-hover: lighten( $color__accent, 10% );
 $color__link-active: darken( $color__accent, 5% );
-$color__text-main: #404040;
 $color__text-site-description: #979797;
-$color__text-meta: #AFAFAF;
 
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;

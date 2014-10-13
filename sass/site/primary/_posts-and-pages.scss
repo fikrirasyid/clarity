@@ -12,12 +12,6 @@
 	display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-	margin: 1.5em 0 0;
-}
-
 .page-links {
 	clear: both;
 	margin: 0 0 1.5em;
@@ -49,66 +43,78 @@
  * Main Content
  */
 #main{
+	padding: 10px;
+
 	.hentry{
-		padding: 40px 15px;
-		border-bottom: 1px solid $color__border;
+		margin-bottom: 10px;
+		background: white;
+		-moz-box-shadow:    0px 2px 2px 0px $color__shadow;
+		box-shadow:         0px 2px 2px 0px $color__shadow;		
 	}
 }
 
 .entry-featured-image{
 	display: block;
-	margin: 0 -15px 10px;
+	margin: 0 0 10px;
 }
 
-.entry-header{
-	.cat-links{		
-		margin-bottom: 5px;
+.entry-meta{		
+	@include font-size( 1.2 );
+	color: $color__text-meta;
+	padding: 15px 15px 0;
 
-		a{
-			color: darken( $color__text-meta, 20% );
-			text-decoration: none;
-			@include font-size( 1.1 );
-			// font-weight: bold;
-			text-transform: uppercase;
-		}
-	}
-
-	.entry-title{
-		@include font-size( 2.6 );
-		margin-top: -5px;
-		margin-bottom: 10px;
-		font-weight: lighter;
-
-		a{
-			// @include font-size( 2 );
-			text-decoration: none;
-		}
-	}
-
-	.entry-meta{		
-		@include font-size( 1.1 );
+	a{
 		color: $color__text-meta;
-		font-weight: lighter;
+		text-decoration: none;					
 
-		a{
-			color: $color__text-meta;
-			text-decoration: none;					
-
-			.genericon,
-			.entry-date{
-				vertical-align: middle;
-			}
-
-			.genericon{
-				margin-right: 5px;
-			}
+		.genericon,
+		.entry-date{
+			vertical-align: middle;
 		}
+
+		.genericon{
+			margin-right: 5px;
+		}
+	}
+}
+
+.entry-title{
+	@include font-size( 2.4 );
+	line-height: 1.2em;
+	margin-top: -5px;
+	font-weight: bold;
+	padding: 15px 15px 0;
+
+	a{
+		// @include font-size( 2 );
+		text-decoration: none;
+	}
+}
+
+.entry-sub-title{
+	@include font-size( 1.6 );
+	padding: 0 15px 20px;
+	color: $color__text-meta;
+	font-weight: lighter;
+
+	a{
+		color: $color__text-meta;
+		text-decoration: none;
 	}
 }
 
 .entry-content{
 	line-height: 1.8;
+	padding: 0 15px 0;
 	// display: none;
+
+	.read-more{
+		background: $color__accent;
+		color: white;
+		text-decoration: none;
+		padding: 10px 25px;
+		@include border-radius( 3px );
+	}
 
 	h1{
 		@include font-size( 2.4 );
@@ -132,7 +138,7 @@
 }		
 
 .entry-footer{
-	padding-top: 20px;
+	padding: 0 15px 15px;
 	@include font-size( 1.1 );
 	color: $color__text-meta;
 	// display: none;
@@ -172,7 +178,6 @@
 
 	.entry-content{
 		@include font-size( 1.8 );
-		color: #222;
 	}
 
 	.entry-footer{

@@ -148,10 +148,10 @@ button,
 input,
 select,
 textarea {
-  color: #404040;
+  color: #555;
   font-family: "Lato", Helvetica, sans-serif;
-  font-size: 13px;
-  font-size: 1.3rem;
+  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.5;
 }
 
@@ -783,7 +783,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 1.5em 3em;
+  margin: 0 0 1.5em 1.5em;
 }
 
 ul {
@@ -1306,7 +1306,7 @@ a:focus, a:active {
 }
 #secondary .widget_rss .rss-date {
   display: block;
-  color: #AFAFAF;
+  color: #9B9B9B;
   margin-bottom: 10px;
   font-size: 12px;
   font-size: 1.2rem;
@@ -1446,12 +1446,6 @@ a:focus, a:active {
   display: inline;
 }
 
-.page-content,
-.entry-content,
-.entry-summary {
-  margin: 1.5em 0 0;
-}
-
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -1470,7 +1464,7 @@ a:focus, a:active {
   font-weight: lighter;
 }
 .page-header .taxonomy-description {
-  color: #AFAFAF;
+  color: #9B9B9B;
   font-style: italic;
 }
 .page-header .taxonomy-description p {
@@ -1480,56 +1474,76 @@ a:focus, a:active {
 /**	
  * Main Content
  */
+#main {
+  padding: 10px;
+}
 #main .hentry {
-  padding: 40px 15px;
-  border-bottom: 1px solid #efefef;
+  margin-bottom: 10px;
+  background: white;
+  -moz-box-shadow: 0px 2px 2px 0px #EFEFEF;
+  box-shadow: 0px 2px 2px 0px #EFEFEF;
 }
 
 .entry-featured-image {
   display: block;
-  margin: 0 -15px 10px;
+  margin: 0 0 10px;
 }
 
-.entry-header .cat-links {
-  margin-bottom: 5px;
+.entry-meta {
+  font-size: 12px;
+  font-size: 1.2rem;
+  color: #9B9B9B;
+  padding: 15px 15px 0;
 }
-.entry-header .cat-links a {
-  color: #7c7c7c;
-  text-decoration: none;
-  font-size: 11px;
-  font-size: 1.1rem;
-  text-transform: uppercase;
-}
-.entry-header .entry-title {
-  font-size: 26px;
-  font-size: 2.6rem;
-  margin-top: -5px;
-  margin-bottom: 10px;
-  font-weight: lighter;
-}
-.entry-header .entry-title a {
+.entry-meta a {
+  color: #9B9B9B;
   text-decoration: none;
 }
-.entry-header .entry-meta {
-  font-size: 11px;
-  font-size: 1.1rem;
-  color: #AFAFAF;
-  font-weight: lighter;
-}
-.entry-header .entry-meta a {
-  color: #AFAFAF;
-  text-decoration: none;
-}
-.entry-header .entry-meta a .genericon,
-.entry-header .entry-meta a .entry-date {
+.entry-meta a .genericon,
+.entry-meta a .entry-date {
   vertical-align: middle;
 }
-.entry-header .entry-meta a .genericon {
+.entry-meta a .genericon {
   margin-right: 5px;
+}
+
+.entry-title {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.2em;
+  margin-top: -5px;
+  font-weight: bold;
+  padding: 15px 15px 0;
+}
+.entry-title a {
+  text-decoration: none;
+}
+
+.entry-sub-title {
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: 0 15px 20px;
+  color: #9B9B9B;
+  font-weight: lighter;
+}
+.entry-sub-title a {
+  color: #9B9B9B;
+  text-decoration: none;
 }
 
 .entry-content {
   line-height: 1.8;
+  padding: 0 15px 0;
+}
+.entry-content .read-more {
+  background: #16A085;
+  color: white;
+  text-decoration: none;
+  padding: 10px 25px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
 .entry-content h1 {
   font-size: 24px;
@@ -1553,15 +1567,15 @@ a:focus, a:active {
 }
 
 .entry-footer {
-  padding-top: 20px;
+  padding: 0 15px 15px;
   font-size: 11px;
   font-size: 1.1rem;
-  color: #AFAFAF;
+  color: #9B9B9B;
 }
 .entry-footer .genericon,
 .entry-footer a {
   text-decoration: none;
-  color: #AFAFAF;
+  color: #9B9B9B;
   vertical-align: middle;
 }
 .entry-footer .genericon {
@@ -1589,7 +1603,6 @@ a:focus, a:active {
   .entry-content {
     font-size: 18px;
     font-size: 1.8rem;
-    color: #222;
   }
 
   .entry-footer {
@@ -1673,10 +1686,10 @@ a:focus, a:active {
 .comment-list .comment-body .comment-meta .comment-metadata {
   font-size: 11px;
   font-size: 1.1rem;
-  color: #AFAFAF;
+  color: #9B9B9B;
 }
 .comment-list .comment-body .comment-meta .comment-metadata a {
-  color: #AFAFAF;
+  color: #9B9B9B;
 }
 .comment-list .comment-body .comment-content {
   line-height: 1.8;
@@ -1702,7 +1715,7 @@ a:focus, a:active {
 #respond .comment-notes {
   font-size: 12px;
   font-size: 1.2rem;
-  color: #AFAFAF;
+  color: #9B9B9B;
 }
 #respond .form-allowed-tags code,
 #respond .comment-notes code {

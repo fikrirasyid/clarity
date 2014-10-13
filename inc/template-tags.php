@@ -1,4 +1,64 @@
 <?php
+if( ! function_exists( 'clarity_sub_title' ) ) :
+/**
+ * Display sub-title part: actual sub title (plugin support) or category info
+ */
+function clarity_sub_title(){
+	global $post;
+
+	$categories 		= get_the_category( $post->ID );
+	$categories_count	= count( $categories );
+	$index_for_and 		= $categories_count - 1;
+
+	// Loop the categories
+	$index = 1;
+
+	_e( 'In ', 'clarity' );
+
+	foreach ( $categories as $category ) {
+		/**
+		 * Separating category
+		 */
+		if( $categories_count > 2 && $index > 1 ){
+			echo ", ";
+		}
+
+		/**
+		 * Correct place for preposition
+		 */
+		if( $categories_count > 2 && $index == $index_for_and ){
+			_e( ' and ', 'clarity' );
+		}
+
+		printf( '<a href="%s" rel="category">%s</a>', esc_url( get_category_link( $category->term_id ) ), esc_attr( $category->cat_name ) );
+
+		/**
+		 * Correct place for preposition
+		 */
+		if( $categories_count == 2 && $index == $index_for_and ){
+			_e( ' and ', 'clarity' );
+		}
+
+		$index++;
+	}
+}
+endif;
+
+if( ! function_exists( 'clarity_excerpt_mod' ) ) :
+/**
+ * Excerpt without the ugly [...]
+ */
+function clarity_excerpt_mod( $output ){
+
+	$read_more = sprintf( '...</p><p class="read-more-wrap"><a href="%s" class="read-more">%s</a>', get_permalink( get_the_ID() ), __( 'Continue Reading', 'clarity' ) );
+
+	$output = str_replace( '[&hellip;]', $read_more, $output );
+
+	return $output;
+}
+endif;
+add_filter( 'get_the_excerpt', 'clarity_excerpt_mod', 100 );
+
 /**
  * Custom template tags for this theme.
  *
