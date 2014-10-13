@@ -92,7 +92,7 @@ add_action( 'widgets_init', 'clarity_widgets_init' );
  * Enqueue scripts and styles.
  */
 function clarity_scripts() {
-	wp_enqueue_style( 'clarity-google-font', 'http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,700,300' );
+	wp_enqueue_style( 'clarity-google-font', 'http://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic,900italic' );
 
 	wp_enqueue_style( 'clarity-style', get_stylesheet_uri() );
 
