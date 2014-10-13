@@ -86,7 +86,7 @@ html {
 }
 
 body {
-  background: #fff;
+  background: #F9F9F9;
   /* Fallback for when there is no custom background color defined. */
 }
 
@@ -852,7 +852,7 @@ input[type="submit"] {
   /* stops bg color from leaking outside the border: */
   -webkit-border-radius: 3px;
   border-radius: 3px;
-  background: #1f7f5c;
+  background: #16A085;
   color: white;
   cursor: pointer;
   /* Improves usability and consistency of cursor style between image-type 'input' and others */
@@ -868,7 +868,7 @@ button:hover,
 input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover {
-  background: #2ebc89;
+  background: #22e1bb;
 }
 
 button:focus,
@@ -879,7 +879,7 @@ button:active,
 input[type="button"]:active,
 input[type="reset"]:active,
 input[type="submit"]:active {
-  background: #15563e;
+  background: #107360;
   outline: 0;
 }
 
@@ -927,7 +927,7 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 textarea:focus {
   outline: 0;
-  border-color: #1f7f5c;
+  border-color: #16A085;
   color: #111;
 }
 
@@ -955,13 +955,13 @@ textarea {
 5.1 Links
 --------------------------------------------------------------*/
 a {
-  color: #1f7f5c;
+  color: #16A085;
 }
 a:hover {
-  color: #29a87a;
+  color: #1ccdaa;
 }
 a:focus, a:active {
-  color: #1a6b4d;
+  color: #138a72;
 }
 
 /*--------------------------------------------------------------
@@ -1022,7 +1022,7 @@ a:focus, a:active {
   margin-top: -8px;
 }
 .menu-toggle:focus, .menu-toggle:active, .menu-toggle:hover {
-  background: #1f7f5c;
+  background: #16A085;
 }
 
 /* Post prev / next navigation */
@@ -1097,10 +1097,10 @@ a:focus, a:active {
     position: relative;
   }
   .main-navigation ul li a:hover {
-    background: #1a6b4d;
+    background: #138a72;
   }
   .main-navigation ul li a:active {
-    background: #24936b;
+    background: #19b698;
   }
   .main-navigation ul li.menu-item-has-children > a:after {
     content: '\f431';
@@ -1113,12 +1113,12 @@ a:focus, a:active {
     top: 42px;
     left: 0;
     width: 200px;
-    background: #1f7f5c;
+    background: #16A085;
     padding-left: 0;
     padding-bottom: 0;
   }
   .main-navigation ul li ul.sub-menu li {
-    border-bottom: 1px solid #1a6b4d;
+    border-bottom: 1px solid #138a72;
     display: block;
   }
   .main-navigation ul li ul.sub-menu li.menu-item-has-children > a {
@@ -1378,7 +1378,6 @@ a:focus, a:active {
 #masthead {
   display: block;
   width: 100%;
-  background: #F3F0F0;
 }
 #masthead .wrap {
   padding-top: 20px;
@@ -1439,7 +1438,7 @@ body.home #masthead .site-title {
   }
 }
 #site-navigation {
-  background: #1f7f5c;
+  background: #16A085;
 }
 #site-navigation a {
   color: white;
