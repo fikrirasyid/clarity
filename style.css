@@ -1380,35 +1380,23 @@ a:focus, a:active {
   width: 100%;
 }
 #masthead .wrap {
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
 }
 #masthead .site-title {
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 30px;
+  font-size: 3rem;
   font-weight: bold;
 }
 #masthead .site-title a {
   text-decoration: none;
 }
 #masthead .site-description {
-  font-size: 12px;
-  font-size: 1.2rem;
+  font-size: 16px;
+  font-size: 1.6rem;
   color: #979797;
   font-weight: lighter;
-}
-
-/**
- * on Homepage, #masthead may have bigger attention
- */
-body.home #masthead .wrap {
-  padding-top: 60px;
-  padding-bottom: 60px;
-  text-align: center;
-}
-body.home #masthead .site-title {
-  font-size: 24px;
-  font-size: 2.4rem;
 }
 
 /**
