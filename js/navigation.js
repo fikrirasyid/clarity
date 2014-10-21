@@ -14,7 +14,7 @@ jQuery(document).ready(function($){
 	/**
 	 * Mobile toggle main navigation UX
 	 */
-	$('.menu-toggle').click(function(e){
+	$('.toggle-button').click(function(e){
 		e.preventDefault();
 
 		var target_id = $(this).attr( 'data-target-id' );

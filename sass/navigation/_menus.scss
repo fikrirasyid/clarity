@@ -88,6 +88,27 @@
 	}
 }
 
+/* Toggle search */
+.search-toggle{
+	float: right;
+	overflow: hidden;
+	position: relative;
+	padding: 17px 0 17px 16px;
+	width: 16px;
+	margin-left: 30px;
+	margin-right: 3px;
+
+	&:before{
+		content: '\f400';
+		font-family: Genericons;
+		@include font-size( 1.6 );
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -8px;
+	}
+}
+
 /* Post prev / next navigation */
 .paging-navigation,
 .post-navigation {
