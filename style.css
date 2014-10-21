@@ -883,6 +883,65 @@ input[type="submit"]:active {
   outline: 0;
 }
 
+button.toggle-button:hover, button.toggle-button:focus, button.toggle-button:active {
+  background: #16A085;
+  opacity: .7;
+}
+
+/* Toggle search */
+.search-toggle {
+  float: right;
+  overflow: hidden;
+  position: relative;
+  padding: 17px 0 17px 16px;
+  width: 16px;
+  margin-left: 30px;
+  margin-right: 3px;
+}
+.search-toggle:before {
+  content: '\f400';
+  font-family: Genericons;
+  font-size: 16px;
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -7px;
+}
+
+.close-search-toggle {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Toggle main top navigation */
+.menu-toggle {
+  float: right;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  padding: 17px 0 17px 16px;
+  width: 16px;
+}
+.menu-toggle:before {
+  content: '\f419';
+  font-family: Genericons;
+  font-size: 16px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  margin-top: -8px;
+}
+
 input[type="checkbox"],
 input[type="radio"] {
   padding: 0;
@@ -1012,53 +1071,6 @@ a:focus, a:active {
   font-size: 2rem;
   font-weight: normal;
   line-height: 1.6;
-}
-
-/* Toggle main top navigation */
-.menu-toggle {
-  float: right;
-  display: inline-block;
-  overflow: hidden;
-  position: relative;
-  background-clip: padding-box;
-  /* stops bg color from leaking outside the border: */
-  -webkit-border-radius: 0;
-  border-radius: 0;
-  padding: 17px 0 17px 16px;
-  width: 16px;
-}
-.menu-toggle:before {
-  content: '\f419';
-  font-family: Genericons;
-  font-size: 16px;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -8px;
-}
-.menu-toggle:focus, .menu-toggle:active, .menu-toggle:hover {
-  background: #16A085;
-}
-
-/* Toggle search */
-.search-toggle {
-  float: right;
-  overflow: hidden;
-  position: relative;
-  padding: 17px 0 17px 16px;
-  width: 16px;
-  margin-left: 30px;
-  margin-right: 3px;
-}
-.search-toggle:before {
-  content: '\f400';
-  font-family: Genericons;
-  font-size: 16px;
-  font-size: 1.6rem;
-  position: absolute;
-  top: 50%;
-  left: 0;
-  margin-top: -8px;
 }
 
 /* Post prev / next navigation */
@@ -1509,16 +1521,6 @@ a:focus, a:active {
   background: rgba(255, 255, 255, 0.97);
   z-index: 20;
   text-align: center;
-}
-
-.close-search-toggle {
-  position: absolute;
-  top: 7px;
-  right: 15px;
-  font-size: 14px;
-  font-size: 1.4rem;
-  padding-right: 0;
-  padding-left: 0;
 }
 
 #search-expand-wrap.toggled #header-search,

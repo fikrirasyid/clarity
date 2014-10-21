@@ -46,15 +46,6 @@
 	text-align: center;	
 }
 
-.close-search-toggle{
-	position: absolute;
-	top: 7px;
-	right: 15px;
-	@include font-size( 1.4 );
-	padding-right: 0;
-	padding-left: 0;
-}
-
 #search-expand-wrap.toggled{
 	#header-search,
 	.search-modal{

@@ -31,3 +31,63 @@ input[type="submit"]:active {
 	background: darken( $color__accent, 10% );
 	outline: 0;
 }
+
+button.toggle-button{
+	&:hover,
+	&:focus,
+	&:active{
+		background: $color__accent;
+		opacity: .7;
+	}
+}
+
+/* Toggle search */
+.search-toggle{
+	float: right;
+	overflow: hidden;
+	position: relative;
+	padding: 17px 0 17px 16px;
+	width: 16px;
+	margin-left: 30px;
+	margin-right: 3px;
+
+	&:before{
+		content: '\f400';
+		font-family: Genericons;
+		@include font-size( 1.6 );
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -7px;
+	}
+}
+
+.close-search-toggle{
+	position: absolute;
+	top: 7px;
+	right: 15px;
+	@include font-size( 1.4 );
+	padding-right: 0;
+	padding-left: 0;
+}
+
+/* Toggle main top navigation */
+.menu-toggle {
+	float: right;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	@include border-radius( 0 );
+	padding: 17px 0 17px 16px;
+	width: 16px;
+
+	&:before{
+		content: '\f419';
+		font-family: Genericons;
+		font-size: 16px;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		margin-top: -8px;
+	}
+}
