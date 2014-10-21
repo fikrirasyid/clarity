@@ -19,6 +19,8 @@ jQuery(document).ready(function($){
 
 		var target_id = $(this).attr( 'data-target-id' );
 
+		$('div[data-target-id="'+target_id+'"], button[data-target-id="'+target_id+'"]').toggleClass('toggled');
+
 		$('#'+target_id).toggleClass('toggled');
 	});
 

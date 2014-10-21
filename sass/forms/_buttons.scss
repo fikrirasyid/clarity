@@ -88,6 +88,13 @@ button.toggle-button{
 		position: absolute;
 		top: 50%;
 		left: 0;
-		margin-top: -8px;
+		margin-top: -7px;
+	}
+
+	&.toggled{
+		&:before{
+			content: '\f405';	
+			margin-top: -6px;		
+		}
 	}
 }

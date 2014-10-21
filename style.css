@@ -939,7 +939,11 @@ button.toggle-button:hover, button.toggle-button:focus, button.toggle-button:act
   position: absolute;
   top: 50%;
   left: 0;
-  margin-top: -8px;
+  margin-top: -7px;
+}
+.menu-toggle.toggled:before {
+  content: '\f405';
+  margin-top: -6px;
 }
 
 input[type="checkbox"],
@@ -1034,6 +1038,11 @@ a:focus, a:active {
   width: 100%;
   font-weight: lighter;
 }
+.main-navigation .wrap {
+  width: 100%;
+  content: "";
+  display: table;
+}
 .main-navigation.toggled ul {
   display: block;
   position: relative;
@@ -1121,6 +1130,27 @@ a:focus, a:active {
   text-decoration: none;
 }
 
+/**	
+* Mobile adjustment
+*/
+@media screen and (max-width: 1023px) {
+  .main-navigation.toggled {
+    position: relative;
+  }
+  .main-navigation.toggled .menu-top-nav-container {
+    content: "";
+    display: table;
+    position: absolute;
+    top: 48px;
+    left: 0;
+    right: 0;
+    background: #18b294;
+    opacity: .97;
+    padding: 10px 15px;
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.5);
+  }
+}
 /**
  * Desktop adjustment
  */
