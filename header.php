@@ -24,6 +24,7 @@
 
 	<nav id="site-navigation" class="main-navigation" role="navigation">
 		<div class="wrap">
+			<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
 			<button class="menu-toggle" data-target-id="site-navigation"><?php _e( 'Menu', 'clarity' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>			
 		</div>

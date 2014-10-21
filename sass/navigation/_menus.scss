@@ -14,6 +14,11 @@
 		}
 	}
 
+	.menu{
+		float: right;
+		@include font-size( 1.6 );
+	}
+
 	ul {
 		list-style: none;
 		margin: 0;
@@ -40,20 +45,31 @@
 	a {
 		display: block;
 		text-decoration: none;
-		padding: 5px 0;
+		padding: 8px 0;
 	}
 
 	.current_page_item a,
 	.current-menu-item a {
 	}
+
+
+	.site-title{
+		float:left;
+		@include font-size( 2 );
+		font-weight: normal;
+		line-height: 1.6;
+	}
 }
 
 /* Toggle main top navigation */
 .menu-toggle {
-	display: block;
+	float: right;
+	display: inline-block;
+	overflow: hidden;
 	position: relative;
 	@include border-radius( 0 );
-	padding: 13px 0 13px 25px;
+	padding: 17px 0 17px 16px;
+	width: 16px;
 
 	&:before{
 		content: '\f419';
@@ -161,7 +177,7 @@
 				display: none;
 				position: absolute;
 				top: 42px;
-				left: 0;
+				right: 0;
 				width: 200px;
 				background: $color__accent;
 				padding-left: 0;
